@@ -1,0 +1,29 @@
+在python中，return可以返回多个值，多个值会放到元组中
+
+作用域 4个
+    局部Local->嵌套Enclosing->全局Global->内建Built-in
+    a = int(10.0) #int:内建作用域
+
+
+var1 = 100
+def f()
+    var+=10 #会报错
+当在函数内部对一个变量进行赋值操作时，python默认会把整个变量当作局部变量，即便全局作用域中已经存在同名变量
+
+在函数内使用 global 声明全局变量
+    函数内使用 global 声明全局变量后，可以修改全局变量。
+    def function_a():
+        global var1
+        var1 = 200
+        print("var1:", var1)
+    var1 = 100
+    print(var1)  # 100
+    function_a()  # var1: 200
+    print(var1)  # 200
+
+匿名函数
+语法：
+lambda 参数列表：表达式
+
+lamnda的主体只是一个表达式，而不是一个代码块
+lambda函数拥有自己的命名空间，且不能访问自己参数列表之外或全局命名空间里的参数
